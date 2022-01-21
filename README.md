@@ -6,7 +6,7 @@
 
 # 2. Experimental results
 
-* Epochs 20
+* Epochs 20 <br>
 |model|1|5|10|15|20|
 |---|---|---|---|---|---|
 |Vanillar DKVMN                           |0.6871|    0.7482|   0.7643|   0.7766|   0.7799|
@@ -14,13 +14,13 @@
 |Feature AutoEncoder DKVMN                |0.5276|    0.5349|   0.5913|   0.6048|   0.6209|
 |Feature AutoEncoder + Fuzzy Lgoic DKVMN  |0.5339|    0.6174|   0.6294|   0.6472|   0.6521|
 
-* Epochs 50
+* Epochs 50 <br>
 |model|1|15|25|35|50|
 |---|---|---|---|---|---|
 |Vanillar DKVMN                            |0.6813|    0.7725|   0.7814|   0.7876|  0.7900|
 |Fuzzy Logic DKVMN                         |0.6819|    0.7773|   0.7809|   0.7856|  0.7893|
 
-* Epochs 300
+* Epochs 300 <br>
 |model|300|
 |---|---|
 |Vanillar DKVMN                            |0.8154|
