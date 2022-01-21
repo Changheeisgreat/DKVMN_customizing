@@ -82,6 +82,10 @@ pred.csv
 ### DKVMN과 같은 메모리 네트워크(Santoro, 2016)<sup>[5](#footnote_5)</sup> 의 특징은 정보를 연결하고 메모리 내의 구조적 관계를 통해 예측 이나 분류 모델의 성능을 발전시킨다는 점이다. 이는 사람의 기억하는 방법을 딥러닝으로 구조화한것으로 해석가능하다. 이와 대응하여, 학습관련 모델을 개발하는데 있어 교육학에 관련된 도메인 지식을 활용하여 모델을 향상시키는 방법을 고려할 수 있다. Kim et al. (2021)<sup>[2](#footnote_2)</sup> 의 논문에서는 정답과 오답에 대한 학습자의 정보를 인코딩 하여 학습자의 Insight를 모델 내부에 구성했다. <br>
 ### 본 연구에서는 다루지 않았지만, 교육학적인 관점 아래에서 학생들이 성적을 맞추고 난 이후의 결과값을 추출하여 심리적인 영향을 줄수있음을 모델에 추가하는것을 제안하고자한다. Uguroglu & Walberg (1979)<sup>[8](#footnote_8)</sup>은 동기부여이론 에서는 정량적인 결과가 학습된 무기력 혹은 자기효능감과 같은 학습 동기에 요인이 될 수 있다 제시한다. 따라서 학생의 학습 결과를 학생의 동기부여로 활용하여 모델에 추가적인 기능을 생성할 수 있다. 예를들어 시험점수의 평균과 같은 데이터를 동기부여 요소로 이용하여, 시계열 분석 방법론을 적용하면 학생의 동기 정보를 학습 가능할것이다.<br>
 
+##### Acknowledgement
+##### Thanks for tianlinyang/DKVMN, helping me construct the entire code structure and evoke some insights.
+
+
 ##### Closing Remarks 
 ##### 본 프로젝트를 진행하며 컴퓨터성능이 더 좋았으면 이라는 생각을 많이 했습니다. Epochs를 300으로 할당한 실험이 36시간 가량 걸렸기 때문에 여러 모델을 비교해서 학습하려는 초기 계획이 틀어진것 같아 많아 아쉽습니다. 또한 LSTM으로 학습하면 현재 장비로는 메모리가 부족해 자동 종료되는 상황에 당황했던 기억이 납니다. :` 더군다나 더 좋은 결과를 위해 제출 시간을 늘려주심에 너무나 감사드립니다. 채용에 관계없이 업스테이지 인사팀의 친절에 감동먹습니다. <br> 부디 다음 테스트를 보시는 분들은 더 많은 기능을 추가한 모델을 더 좋은 환경에서 사용하기를 기원드립니다.
 
@@ -98,7 +102,6 @@ pred.csv
 <a name="footnote_10">[10]</a> Yudelson, M. V., Koedinger, K. R., & Gordon, G. J. (2013, July). Individualized bayesian knowledge tracing models. In International conference on artificial intelligence in education (pp. 171-180). Springer, Berlin, Heidelberg.<br>
 <a name="footnote_11">[11]</a> Zhang, J., Shi, X., King, I., & Yeung, D. Y. (2017, April). Dynamic key-value memory networks for knowledge tracing. In Proceedings of the 26th international conference on World Wide Web (pp. 765-774).<br>
 <a name="footnote_12">[12]</a> Zhang, L., Xiong, X., Zhao, S., Botelho, A., & Heffernan, N. T. (2017, April). Incorporating rich features into deep knowledge tracing. In Proceedings of the fourth (2017) ACM conference on learning@ scale (pp. 169-172. <br>
-
 
 
 
