@@ -1,4 +1,4 @@
-# UPSTAGE_DKT
+# DKVMN CUSTOMIZING
 # 1. Summary
 ### 학생의 학습을 예측하는 모델을 만들기 위해서 학생 개인의 학습 관련 데이터를 순차적으로 입력하여 다음 결과를 예측하는 모델이 필요하다. 본 실험에서는 DKVMN(Dyanamic Key Value Memory Network) 모델을 활용했으며, 이 모델은 학생의 학습기록을 메모리 네트워크에 저장해 시간에 따라 메모리가 업데이트 되는 구조를 가진 딥러닝모델이다. 또한 기존 DKVMN 모델에, Feature 데이터를 입력시키고 메모리 네트워크의 Attention 메커니즘에 Fuzzy Logic을 적용해 학습시키는 방법으로 모델을 개량하였다. 본 실험에서 제안하는 모델의 성능 비교를 위해 각 모델의 AUC(Area under the ROC Curve)를 비교했으며 20Epochs으로 학습하였다. 추후로 모델을 향상시키기 위해서는 메모리 네트워크를 활용하는것이 기대되며, Feature를 Bundle과 조합하여 활용하는 연구가 필요하다. 
 
@@ -87,7 +87,7 @@ pred.csv
 
 
 ##### Closing Remarks 
-##### 본 프로젝트를 진행하며 컴퓨터성능이 더 좋았으면 이라는 생각을 많이 했습니다. Epochs를 300으로 할당한 실험이 36시간 가량 걸렸기 때문에 여러 모델을 비교해서 학습하려는 초기 계획이 틀어진것 같아 많아 아쉽습니다. 또한 LSTM으로 학습하면 현재 장비로는 메모리가 부족해 자동 종료되는 상황에 당황했던 기억이 납니다. :` 더군다나 더 좋은 결과를 위해 제출 시간을 늘려주심에 너무나 감사드립니다. 채용에 관계없이 업스테이지 인사팀의 친절에 감동먹습니다. <br> 부디 다음 테스트를 보시는 분들은 더 많은 기능을 추가한 모델을 더 좋은 환경에서 사용하기를 기원드립니다.
+##### 본 프로젝트를 진행하며 컴퓨터성능이 더 좋았으면 이라는 생각을 많이 했습니다. Epochs를 300으로 할당한 실험이 36시간 가량 걸렸기 때문에 여러 모델을 비교해서 학습하려는 초기 계획이 틀어진것 같아 많아 아쉽습니다. 또한 LSTM으로 학습하면 현재 장비로는 메모리가 부족해 자동 종료되는 상황에 당황했던 기억이 납니다. :` 
 
 ##### References
 <a name="footnote_1">[1]</a> Abdelrahman, G., & Wang, Q. (2019, July). Knowledge tracing with sequential key-value memory networks. In Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval (pp. 175-184).<br>
