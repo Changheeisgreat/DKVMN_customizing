@@ -1,6 +1,6 @@
 # DKVMN CUSTOMIZING
 # 1. Summary
-### 학생의 학습을 예측하는 모델을 만들기 위해서 학생 개인의 학습 관련 데이터를 순차적으로 입력하여 다음 결과를 예측하는 모델이 필요하다. 본 실험에서는 DKVMN(Dyanamic Key Value Memory Network) 모델을 활용했으며, 이 모델은 학생의 학습기록을 메모리 네트워크에 저장해 시간에 따라 메모리가 업데이트 되는 구조를 가진 딥러닝모델이다. 또한 기존 DKVMN 모델에, Feature 데이터를 입력시키고 메모리 네트워크의 Attention 메커니즘에 Fuzzy Logic을 적용해 학습시키는 방법으로 모델을 개량하였다. 본 실험에서 제안하는 모델의 성능 비교를 위해 각 모델의 AUC(Area under the ROC Curve)를 비교했으며 20Epochs으로 학습하였다. 추후로 모델을 향상시키기 위해서는 메모리 네트워크를 활용하는것이 기대되며, Feature를 Bundle과 조합하여 활용하는 연구가 필요하다. 
+### In order to create a model that predicts student learning, a model that predicts the next result by sequentially inputting individual student learning-related data is needed. In this experiment, the DKVMN (Dynamic Key Value Memory Network) model was used, which is a deep learning model with a structure in which the memory of students is updated over time by storing the student's learning records in a memory network. In addition, the model was improved by inputting feature data into the existing DKVMN model and learning by applying Fuzzy Logic to the attention mechanism of the memory network. To compare the performance of the models proposed in this experiment, the AUC (Area under the ROC Curve) of each model was compared, and 20 Epochs were trained. In order to improve the model in the future, it is expected to utilize the memory network, and research on using features in combination with bundles is required.
 
 
 
@@ -30,19 +30,19 @@
 
 # 3. Instruction
 ## (1) Prepare your data
-#### - 데이터를 DKVMN에 학습 가능한 형태로 변환시키는 과정이 필요합니다.
+#### - The process of transforming the data into a form that can be learned by DKVMN is required.
 ```
 Number of bundles    3
 Bundle sequences     60, 60, 60
 Correctness info     0, 1, 1
 ```
-#### - 데이터를 위와 같이 변환하는 코드가 main.py에 포함되어있습니다. (default=False)
+#### - The code to convert the data as above is included in main.py. (default=False)
 ```bash
 % python main.py --trans=True
 ```
 
 ## (2) Parsing & Run
-#### - 모델에 추가할 Add-on을 설정합니다. 
+#### - Set up Add-ons to be added to the model. 
 #### 1) DKVMN (Default, Baseline)
 ```bash
 % python main.py --auto_encoder=False --fuzzy_logic=False --feedforward=False
@@ -64,13 +64,13 @@ Correctness info     0, 1, 1
 
 ```
 ## (3) OUTPUT
-#### 총 세가지 파일이 결과물로 나옵니다. 
+#### A total of three results are output.
 ~~~
 model.pth
 train_result.pickle
 pred.csv
 ~~~
-
+<!---
 # 4. Approach
 ## (1) Feature
 ### 기존 BKT(Yudelson et al., 2013)<sup>[10](#footnote_10)</sup>, DKT(Piech et al., 2017)<sup>[4](#footnote_4)</sup>, DKVMN(Zhang et al., 2017)<sup>[11](#footnote_11)</sup>와 같은 Knowledg Tracing의 모델은 학생들의 학습기록의 결과(correctness) 정보 만으로 네트워크를 학습시킨다. 이러한 모델을 응용하여 이후의 여러 연구에서 Feature를 추가한 모델을 발표하였다. Zhang et al. (2017)<sup>[12](#footnote_12)</sup>은 학습관련 Feature를 오토인코더를 활용하여 차원축소 이후 LSTM 기반의 DKT모델에 적용하여 성능을 향상시켰다. Sun et al. (2021)<sup>[7](#footnote_7)</sup>의 모델에서는 학습능력 Feature를 KMeans 알고리즘을 활용해 학생들을 세 그룹으로 나누었으며, 이를 DKVNM의 메모리 업데이트 부분과 예측부분에 추가하여, 기존의 모델에 Feature를 추가로 학습시키는 방법론을 제시했다. <br>
@@ -84,10 +84,6 @@ pred.csv
 
 ##### Acknowledgement
 ##### Thanks for tianlinyang/DKVMN, helping me construct the entire code structure and evoke some insights.
-
-
-##### Closing Remarks 
-##### 본 프로젝트를 진행하며 컴퓨터성능이 더 좋았으면 이라는 생각을 많이 했습니다. Epochs를 300으로 할당한 실험이 36시간 가량 걸렸기 때문에 여러 모델을 비교해서 학습하려는 초기 계획이 틀어진것 같아 많아 아쉽습니다. 또한 LSTM으로 학습하면 현재 장비로는 메모리가 부족해 자동 종료되는 상황에 당황했던 기억이 납니다. :` 
 
 ##### References
 <a name="footnote_1">[1]</a> Abdelrahman, G., & Wang, Q. (2019, July). Knowledge tracing with sequential key-value memory networks. In Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval (pp. 175-184).<br>
@@ -103,6 +99,6 @@ pred.csv
 <a name="footnote_11">[11]</a> Zhang, J., Shi, X., King, I., & Yeung, D. Y. (2017, April). Dynamic key-value memory networks for knowledge tracing. In Proceedings of the 26th international conference on World Wide Web (pp. 765-774).<br>
 <a name="footnote_12">[12]</a> Zhang, L., Xiong, X., Zhao, S., Botelho, A., & Heffernan, N. T. (2017, April). Incorporating rich features into deep knowledge tracing. In Proceedings of the fourth (2017) ACM conference on learning@ scale (pp. 169-172. <br>
 
-
+--->
 
 
